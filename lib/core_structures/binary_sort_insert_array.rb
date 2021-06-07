@@ -65,6 +65,10 @@ module CoreStructures
       store.count
     end
 
+    def include?(*args)
+      store.include?(*args)
+    end
+
     private
 
     def store

@@ -78,4 +78,24 @@ describe CoreStructures::BinarySortInsertArray do
 
     it { is_expected.to eq(0) }
   end
+
+  describe "#include?" do
+    it "behaves like an array" do
+      array = []
+
+      array << 1
+      array << 2
+
+      described_instance << 1
+      described_instance << 2
+
+      expect(array).to include(1)
+      expect(array).to include(2)
+      expect(array).to_not include(3)
+
+      expect(described_instance).to include(1)
+      expect(described_instance).to include(2)
+      expect(described_instance).to_not include(3)
+    end
+  end
 end
