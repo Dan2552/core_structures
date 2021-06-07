@@ -14,6 +14,14 @@ describe CoreStructures::ProxyWithDeniedMethods do
     expect(object).to eq([2])
   end
 
+  it "works with methods that take blocks" do
+    elements = []
+    described_instance.each do |element|
+      elements << element
+    end
+    expect(elements).to eq([1, 2])
+  end
+
   it "blocks methods that are in the denied list" do
     expect { described_instance << 3 }
       .to raise_error("Method << denied by ProxyWithDeniedMethods")
