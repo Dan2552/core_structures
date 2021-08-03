@@ -1,1 +1,9 @@
-f04a8384237a38396178d45af867ba97
+# https://github.com/mruby/mruby 3.0.0
+
+MRuby::Build.new do |conf|
+  toolchain :clang
+
+  conf.gembox "default"
+  conf.gem :path => "/Users/dan2552/Dropbox/experiments/avian/pelican/core_structures"
+  conf.gem :github => "Dan2552/mruby-irb_like_debugger"
+end

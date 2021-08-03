@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.authors = ["Daniel Inkpen"]
   spec.email = ["dan2552@gmail.com"]
 
-  spec.summary = "Core structures/classes for graphics drawing"
-  spec.description = spec.summary
+  spec.summary = "An odd collection of core structures/classes that aren't in the stdlib."
+  spec.description = "Primarily for the Pelican UI framework, but not dependent on it. Can be used as both a Ruby gem and mruby mrbgem."
   spec.homepage = "https://github.com/Dan2552/core_structures"
   spec.license = "MIT"
 
